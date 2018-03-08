@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var url = process.env.MONGOLAB_URI
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -41,6 +43,16 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+// Mongoose Connect // connect to mlab // when server loaded will confirm connection
+
+mongoose.connect(url, function (err, db){
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err );
+  } else {
+    console.log('Connect established to', url)
+  }
 });
 
 module.exports = app;
