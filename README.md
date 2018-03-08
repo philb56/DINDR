@@ -2,6 +2,17 @@
 
 This is an app built to help developers find other developers to pair with. 
 
+
+## Tutorials based on this repository
+
+#### How to set up and app with React and Express
+
+[How to set up and app with React and Express](https://www.gitbook.com/book/leigan0/team-glow/edit#/edit/master/Tutorials/How to set up and app with React and Express.md?_k=qa5hxr)
+```
+git clone https://github.com/Leigan0/DINDR.git
+git checkout e50ba9d1789
+```
+
 ## User Stories
 
 ### MVP
